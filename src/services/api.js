@@ -1,4 +1,6 @@
-const BASE = 'https://apiserver-jwex.onrender.com'
+// In production, API calls go through the same-origin proxy (Netlify/Vercel rewrites).
+// In development, Vite dev server proxy handles it (see vite.config.js).
+const BASE = ''
 
 async function get(path) {
   const res = await fetch(`${BASE}${path}`)
